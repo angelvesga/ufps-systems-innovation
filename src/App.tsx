@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { Navbar } from "@/components/site/Navbar";
 import { Hero } from "@/components/site/Hero";
 import { About } from "@/components/site/About";
@@ -11,19 +10,7 @@ import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { useReveal } from "@/hooks/use-reveal";
 
-export const Route = createFileRoute("/")({
-  component: Index,
-  head: () => ({
-    meta: [
-      { title: "Ingeniería de Sistemas — UFPS" },
-      { name: "description", content: "Programa de Ingeniería de Sistemas de la UFPS: software, IA, ciberseguridad, redes y desarrollo web. Forma parte del futuro tecnológico." },
-      { property: "og:title", content: "Ingeniería de Sistemas — UFPS" },
-      { property: "og:description", content: "Programa universitario de Ingeniería de Sistemas en la Universidad Francisco de Paula Santander." },
-    ],
-  }),
-});
-
-function Index() {
+export default function App() {
   useReveal();
   return (
     <main className="min-h-screen bg-background text-foreground">
